@@ -1,6 +1,6 @@
 <div class="container">
   <%= @drink.name %>
-  <br>
+  <hr>
   <%= @drink.description %>
   <br>
   <%= link_to "Edit", edit_drink_path(@drink), class: "btn btn-default" %>
@@ -8,8 +8,19 @@
 </div>
 
 <div class="container">
-  <% @drink.ingredients.each do |i| %>
-    <hr>
-    <%= i.name %>
-  <% end %>
+
+  <div class="col-md-6">
+    <% @drink.ingredients.each do |i| %>
+      <hr>
+      <%= i.name %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <% @drink.directions.each do |d| %>
+      <hr>
+      <%= d.step %>
+    <% end %>
+  </div>
+
 </div>
