@@ -1,5 +1,7 @@
 class DrinksController < ApplicationController
 
+  before_action :find_drink, only: [:show, :edit, :update, :destroy]
+
   def index
     @drinks = Drink.all
   end
@@ -22,16 +24,14 @@ class DrinksController < ApplicationController
   end
 
   def edit
-    @drink = Drink.find params[:id]
   end
 
   def update
-    @drink.update
-      if @drink.update
-        redirect_to @drink
-      else
-        render :edit
-      end
+    if @drink.update drink_params
+      redirect_to @drink
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -40,6 +40,10 @@ class DrinksController < ApplicationController
   end
 
 private
+
+  def find_drink
+    @drink = Drink.find params[:id]
+  end
 
   def drink_params
     params.require(:drink).permit(:name, :description)
