@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'cocoon'
 
 group :development, :test do
   gem 'byebug'

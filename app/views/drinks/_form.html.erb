@@ -1,7 +1,17 @@
 <div class="container">
-  <%= simple_form_for(@drink, html: { class: 'form-horizontal' }) do |f| %>
+  <%= simple_form_for @drink do |f| %>
   <%= f.input :name, placeholder: "Enter a drink name..." %>
   <%= f.input :description, placeholder: "Enter a description for the drink..." %>
   <%= f.button :submit %>
-  <% end %>
+
+  <h3>Ingredients</h3>
+    <div id="ingredients" class="col-md-6">
+      <%= f.simple_fields_for :ingredients do |ingredient| %>
+        <%= render 'ingredient_fields', :f => ingredient %>
+      <div class="links">
+      <% end %>
+        <%= link_to_add_association 'Add Ingredient', f, :ingredients, class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>
 </div>

@@ -3,10 +3,16 @@
 <head>
   <title>Liqs</title>
   <%= stylesheet_link_tag    'application', media: 'all'%>
-  <%= javascript_include_tag 'application'%>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="navbar navbar-default text-center">
+  <%= link_to "All Drink", drinks_path %>
+  |
+  <%= link_to "New Drink", new_drink_path %>
+</div>
 
 <%= yield %>
 
