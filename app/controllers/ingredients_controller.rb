@@ -7,8 +7,15 @@ class IngredientsController < ApplicationController
 
   def create
     @ingredient = Ingredient.new ingredient_params
-    @ingredient.save
-    redirect_to new_ingredient_path
+    respond_to do |format|
+      if @ingredient.save
+        format.html { render :new }
+        format.js { render }
+      else
+        format.html { render :new }
+        format.js { render }
+      end
+    end
   end
 
   def edit

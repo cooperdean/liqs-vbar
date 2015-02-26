@@ -2,7 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .ingredient_select {
+  height: 300px;
+  overflow: scroll;
+}
+
+.ingredient_list {
   height: 300px;
   overflow: scroll;
 }
