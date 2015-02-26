@@ -12,7 +12,6 @@ class DrinksController < ApplicationController
 
   def new
     @drink = Drink.new
-    @drink.ingredients.build
   end
 
   def create 
@@ -49,7 +48,7 @@ private
   def drink_params
     params.require(:drink).permit(
                                   :name, :description, 
-                                  ingredients_attributes: [:id, :name, :_destroy],
+                                  :ingredients => [:id],
                                   directions_attributes: [:id, :step, :_destroy]
                                   )
   end 
