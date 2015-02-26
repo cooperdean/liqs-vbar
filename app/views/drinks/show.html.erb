@@ -1,8 +1,6 @@
 <div class="container">
   <%= @drink.name %>
   <hr>
-  <%= @drink.description %>
-  <br>
   <%= link_to "Edit", edit_drink_path(@drink), class: "btn btn-default" %>
   <%= link_to "Delete", drink_path(@drink) , method: :delete, class: "btn btn-default" %>
 </div>

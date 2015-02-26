@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-md-6">
+    <%= simple_form_for @ingredient do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6 text-center">
+    <br>
+    <% @ingredients.each do |i| %>
+        <%= i.name %>
+        <hr>
+    <% end %>
+  </div>
+</div>
