@@ -1,0 +1,4 @@
+<%= simple_form_for @shelf do |f| %>
+<%= f.association :ingredients, as: :check_boxes %>
+<%= f.button :submit %>
+<% end %>

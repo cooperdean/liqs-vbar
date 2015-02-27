@@ -8,12 +8,17 @@
 </head>
 <body>
 
-<div class="navbar navbar-default text-center">
-  <%= link_to "All Drink", drinks_path %>
-  |
-  <%= link_to "New Drink", new_drink_path %>
-  |
-  <%= link_to "New Ingredient", new_ingredient_path %>
+<div class="nav-header">
+
+  <div class="col-md-6 site-title text-center">
+    Liqs
+  </div>
+  <div class="col-md-6 nav-logo-text text-center">
+    <%= link_to "All Drinks", drinks_path, class: "nav-link" %>
+    <%= link_to "New Drink", new_drink_path, class: "nav-link" %>
+    <%= link_to "New Ingredients", new_ingredient_path, class: "nav-link" %>
+  </div>
+
 </div>
 
 <%= yield %>

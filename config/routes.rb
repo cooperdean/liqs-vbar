@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 root "drinks#index"
 
 resources :drinks
+resources :shelves
 resources :ingredients, only: [:new, :create]
 
 end

@@ -13,6 +13,8 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'cocoon'
 
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
