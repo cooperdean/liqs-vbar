@@ -7,6 +7,7 @@ before_action :find_shelf, only: [:show, :edit, :update]
 
   def show
     @shelf = Shelf.find params[:id]
+    @ingredients = Ingredient.all
   end
 
   def new

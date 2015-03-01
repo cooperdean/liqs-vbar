@@ -6,12 +6,16 @@
   color: white;
 }
 
-.green-text {
-  color: #72ead2;
+hr {
+  border-color: #da7565;
 }
 
 .light-text {
   font-weight: lighter;
+}
+
+.bold-font {
+  font-weight: bold;
 }
 
 .large-text {
@@ -26,6 +30,46 @@
   font-size: 32px;
 }
 
+.small-text {
+  font-size: 22px;
+}
+
+.smaller-text {
+  font-size: 10px;
+}
+
+.shadowed {
+  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.75);
+}
+
+.light-shadowed {
+  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.50);
+}
+
+.main-font {
+  font-family: 'Lobster', cursive;
+}
+
+.alt-font {
+  font-family: Montserrat;
+  color: #da7565;
+}
+
+.form-control {
+  background: none;
+  border-radius: 50px;
+  border-color: #da7565;
+  color: #da7565;
+  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.75);
+}
+
+.form-control:focus {
+  background: none;
+  border-radius: 50px;
+  border-color: #da7565;
+  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 1);
+}
+
 .nav-text {
   color: white;
   font-size: 18px;
@@ -34,30 +78,42 @@
 .nav-header {
   font-family: Montserrat;
   height: 150px;  
-  margin-bottom: 100px;
+  float: right;
+  width: 100%;
+  background: url("gradient.png") fixed;
+}
+
+.full-width {
   width: 100%;
 }
 
-.liqbox {
+.liqs_adder {
   text-align: center;
-  border: solid #72ead2 2px;
-  border-radius: 50px;
-  margin: 10px;
-  height: 200px;
-  width: 150px;
+  height: 450px;
+  width: 25%;
+  margin: 25px;
   transition: 0.3s;
+}
+
+.ingli {
+  letter-spacing: 2px;
 }
 
 #liq-plus {
   height: 150px;
   padding-top: 35px;
-  font-weight: bolder;
   transition: 0.3s;
 }
 
 .liqtext {
   color: white;
   padding-top: 15px;
+}
+
+.shelf-ingredients {
+  overflow: scroll;
+  height: 350px;
+  margin-top: 20px;
 }
 
 .bottle {
@@ -68,16 +124,15 @@
 .site-title {
   font-family: 'Lobster', cursive;
   letter-spacing: 2px;
-  color: #72ead2;
+  color: #da7565;
   font-size: 100px;
 }
 
 .nav-header a {
   position: relative;
-  top: 70px;
-  border: solid white 1px;
   border-radius: 50px;
+  top: 70px;
   padding: 10px;
-  color: #72ead2;
+  color: #D56B67 ;
   transition: 0.2s;
 }

@@ -1,11 +1,31 @@
-<div class="container">
+<div class="container full-width" id="shelf-container">
 
   <div class="row">
 
+    <div class="liqs_adder alt-font">
+      <br>
+        ADD INGREDIENTS TO YOUR SHELF
+      <div class="col-md-12">
+         <form>
+          <input class="form-control" id="ingredient_search" type="text"/>
+        </form>
+      </div>
+      <div class="col-md-12 shelf-ingredients text-center">
+        <br>
+          <% @ingredients.each do |i| %>
 
-    <div class="col-xs-1 col-md-2 liqbox">
-        <div class="larger-text green-text" id="liq-plus"> + </div>
+          <div class="ingli">
+            <%= i.name %>
+            <br>
+          </div>
+
+          <% end %>
+
+      </div>
+
     </div>
+
+
 
   </div>
 

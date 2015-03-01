@@ -3,29 +3,28 @@ $(document).ready( function() {
 // TEXT DECORATION - NONE
   $('.nav-header a').css('text-decoration', 'none')
 
-// NAVBAR LINKS HOVER
-  $('.nav-header a').hover( function () {
+// INGREDIENT SEARCH
+$('#ingredient_search').keyup(function(){
+   var valThis = $(this).val().toLowerCase();
+    if(valThis == ""){
+        $('.shelf-ingredients > .ingli').show();           
+    } else {
+        $('.shelf-ingredients > .ingli').each(function(){
+            var text = $(this).text().toLowerCase();
+            (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
+        });
+   };
+});
 
-    $(this).css('background', '#72ead2')
-    $(this).css('color', '#1c1c1c')
-
-  }, function () {
-
-    $(this).css('color', '#72ead2')
-    $(this).css('background', 'none')
-
-  });
 
 // LIQBOX LINKS HOVER
-  $('.liqbox').hover( function () {
+  $('.nav-header a').hover( function () {
 
-    $(this).css('background', '#72ead2')
-    $('#liq-plus').css('color', '#1c1c1c')
+    $(this).addClass('shadowed')
 
   }, function () {
 
-    $(this).css('background', 'none')
-    $('#liq-plus').css('color', '#72ead2')
+    $(this).removeClass('shadowed')
 
   });
 
