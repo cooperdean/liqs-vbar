@@ -1,6 +1,6 @@
 class ShelvesController < ApplicationController
 
-before_action :find_shelf, only: [:show, :edit, :update]
+before_action :find_shelf, only: [:show, :edit, :update, :add_ingredient]
 
   def index
   end

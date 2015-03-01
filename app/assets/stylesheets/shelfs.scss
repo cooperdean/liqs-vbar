@@ -6,10 +6,6 @@
   color: white;
 }
 
-hr {
-  border-color: #da7565;
-}
-
 .light-text {
   font-weight: lighter;
 }
@@ -39,11 +35,19 @@ hr {
 }
 
 .shadowed {
-  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+.shadowed-inset {
+  box-shadow: inset 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
 .light-shadowed {
-  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.50);
+  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.25);
+}
+
+.text-shadow {
+  text-shadow: 0px 5px 20px rgba(50, 50, 50, 0.75);
 }
 
 .main-font {
@@ -52,35 +56,27 @@ hr {
 
 .alt-font {
   font-family: Montserrat;
-  color: #da7565;
 }
 
 .form-control {
   background: none;
-  border-radius: 50px;
-  border-color: #da7565;
-  color: #da7565;
-  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.75);
+  color: white;
+  border-color: #e8d136;
+  border-radius: 0px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
 .form-control:focus {
   background: none;
-  border-radius: 50px;
-  border-color: #da7565;
-  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 1);
-}
-
-.nav-text {
-  color: white;
-  font-size: 18px;
+  border-radius: 0px;
+  border-color: #e8d136;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
 .nav-header {
   font-family: Montserrat;
-  height: 150px;  
-  float: right;
+  height: 135px;
   width: 100%;
-  background: url("gradient.png") fixed;
 }
 
 .full-width {
@@ -90,18 +86,36 @@ hr {
 .liqs_adder {
   text-align: center;
   height: 450px;
-  width: 25%;
-  margin: 25px;
+  width: 300px;
   transition: 0.3s;
+  margin: 25px;
 }
 
 .ingli {
-  letter-spacing: 2px;
+  transition: 0.3s;
+  text-shadow: 0px 5px 30px rgba(0, 0, 0, 0.75);
+  text-transform: uppercase;
 }
+
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
 
 #liq-plus {
   height: 150px;
   padding-top: 35px;
+  transition: 0.3s;
+}
+
+.liq-ing {
+  margin: 25px;
+  width: 150px;
+  height: 225px;
   transition: 0.3s;
 }
 
@@ -112,9 +126,9 @@ hr {
 
 .shelf-ingredients {
   overflow: scroll;
-  height: 350px;
-  margin-top: 20px;
-}
+  height: 270px;
+  margin-top: -20px;
+  }
 
 .bottle {
   height: 150px;
@@ -124,15 +138,16 @@ hr {
 .site-title {
   font-family: 'Lobster', cursive;
   letter-spacing: 2px;
-  color: #da7565;
-  font-size: 100px;
+  color: #e8d136;
+  font-size: 80px;
+  text-shadow: 0px 5px 20px rgba(50, 50, 50, 0.75);
+
 }
 
 .nav-header a {
   position: relative;
-  border-radius: 50px;
-  top: 70px;
+  top: 60px;
   padding: 10px;
-  color: #D56B67 ;
+  color: white;
   transition: 0.2s;
 }

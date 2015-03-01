@@ -1,32 +1,37 @@
 <div class="container full-width" id="shelf-container">
-
   <div class="row">
-
-    <div class="liqs_adder alt-font">
+    
+    <!-- INGREDIENT ADDER -->
+    <div class="col-md-3 liqs_adder alt-font white-text">
+      
       <br>
         ADD INGREDIENTS TO YOUR SHELF
+    
       <div class="col-md-12">
          <form>
+          <br>
           <input class="form-control" id="ingredient_search" type="text"/>
         </form>
       </div>
-      <div class="col-md-12 shelf-ingredients text-center">
+      
+      <div class="col-md-12">
         <br>
-          <% @ingredients.each do |i| %>
-
-          <div class="ingli">
-            <%= i.name %>
-            <br>
-          </div>
-
-          <% end %>
-
+        <hr>
       </div>
 
+      <div class="col-md-12 shelf-ingredients text-center">
+          <% @ingredients.order(:name).each do |i| %>
+            <div class="ingli">
+             <%= i.name %>
+              <br>
+            </div>
+          <% end %>
+      </div>
     </div>
 
+    <!--  SHELFED INGREDIENTS -->
+    <% @shelf.ingredients.each do |i| %>
 
 
   </div>
-
 </div>
