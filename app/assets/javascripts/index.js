@@ -1,17 +1,17 @@
 $(document).ready( function() {
 
 // TEXT DECORATION - NONE
-  $('.nav-header a').css('text-decoration', 'none')
+  $('a').css('text-decoration', 'none')
 
 // INGREDIENT SEARCH
 $('#ingredient_search').keyup(function(){
    var valThis = $(this).val().toLowerCase();
     if(valThis == ""){
-        $('.shelf-ingredients > .ingli').fadeIn();           
+        $('.shelf-ingredients > .ingli').show();           
     } else {
         $('.shelf-ingredients > .ingli').each(function(){
             var text = $(this).text().toLowerCase();
-            (text.indexOf(valThis) >= 0) ? $(this).fadeIn() : $(this).fadeOut();
+            (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
         });
    };
 });
@@ -20,7 +20,7 @@ $('#ingredient_search').keyup(function(){
 
 
 // NAVLINKS LINKS HOVER
-  $('.nav-header a').hover( function () {
+  $('a').hover( function () {
 
     $(this).css('color', '#e8d136')
 

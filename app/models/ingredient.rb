@@ -1,4 +1,4 @@
 class Ingredient < ActiveRecord::Base
-  belongs_to :drink
-  belongs_to :shelf
+  has_many :drinks
+  has_many :shelfs
 end

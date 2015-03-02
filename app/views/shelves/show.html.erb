@@ -22,7 +22,7 @@
       <div class="col-md-12 shelf-ingredients text-center">
           <% @ingredients.order(:name).each do |i| %>
             <div class="ingli">
-             <%= i.name %>
+             <%= link_to i.name, add_ingredient_path(@shelf, i) %>
               <br>
             </div>
           <% end %>
@@ -30,7 +30,17 @@
     </div>
 
     <!--  SHELFED INGREDIENTS -->
-    <% @shelf.ingredients.each do |i| %>
+
+    <% @shelf.ingredients.each do |si| %>
+
+      <div class="col-md-2 liq-ing shadowed text-center">
+          <%= image_tag ("bottle_mix.png"), class: "bottle" %>  
+            <div class="liqtext alt-font">
+              <%= si.name %>
+            </div>
+     </div>
+
+    <% end %>
 
 
   </div>

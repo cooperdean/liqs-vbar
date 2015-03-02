@@ -1,6 +1,6 @@
 class ShelvesController < ApplicationController
 
-before_action :find_shelf, only: [:show, :edit, :update, :add_ingredient]
+before_action :find_shelf, only: [:show, :edit, :update]
 
   def index
   end
@@ -32,6 +32,14 @@ before_action :find_shelf, only: [:show, :edit, :update, :add_ingredient]
     else
       render :edit
     end
+  end
+
+  def add_ingredient
+    @shelf = Shelf.find params[:shelf_id]
+    @ingredient = Ingredient.find params[:id]
+    @shelf.ingredients << @ingredient
+    @shelf.save
+    redirect_to(:back)
   end
 
 private
