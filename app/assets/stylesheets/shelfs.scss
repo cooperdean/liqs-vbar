@@ -134,7 +134,30 @@ a {
   background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
 }
 
+.liq-drink {
+  margin: 25px;
+  width: 200px;
+  height: 200px;
+  transition: 0.3s;
+  border: solid #58ACFA 1px;
+  background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
+}
+
+#drink_container {
+  display: none;
+}
+
 #submit_box {
+  padding-top: 50px; 
+  margin: 25px;
+  width: 150px;
+  height: 200px;
+  transition: 0.3s;
+  border: solid #e8d136 1px;
+  background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
+}
+
+#edit_box {
   padding-top: 50px; 
   margin: 25px;
   width: 150px;
@@ -150,6 +173,16 @@ a {
   line-height: 90%;
   transition: 0.3s;
   padding-top: 10px;
+  font-size: 15px;
+}
+
+.drinktext {
+  font-family: 'Lobster', cursive;
+  color: white;
+  line-height: 90%;
+  transition: 0.3s;
+  padding-top: 10px;
+  font-size: 32px;
 }
 
 .liq-remove {
@@ -162,7 +195,13 @@ a {
   overflow: scroll;
   height: 270px;
   margin-top: -20px;
-  }
+}
+
+.drink_ingredients {
+  overflow: scroll;
+  height: 300px;
+  margin-top: 20px;
+}
 
 .bottle {
   height: 150px;

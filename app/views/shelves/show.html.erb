@@ -31,8 +31,9 @@
 
     <!--  SHELFED INGREDIENTS -->
 
-    <div class="col-md-2 shadowed text-center white-text large-text" id="submit_box">
-      +
+    <div class="col-md-2 shadowed text-center white-text large-text alt-font" id="submit_box">
+      <span class="glyphicon glyphicon-ok"></span>
+      <h5>SUBMIT</h5>
     </div>
 
     <% @shelf.ingredients.order(:name).each do |i| %>
@@ -60,19 +61,31 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="drink_container">
+
+      <div class="col-md-2 shadowed text-center white-text large-text" id="edit_box">
+      +
+    </div>
 
   <% @drinks.each do |d| %>
-  
-    <%# if @shelf.ingredients.all? { |a| d.ingredients.include?(a) } %>
-    
-    <% if (@shelf.ingredients & d.ingredients == d.ingredients) %>
-      
-      <div class="col-md-2 liq-ing text-center shadowed white-text">
-        <%= d.name %>
+    <% di_array = d.ingredients.map { |di| di.name } %>
+    <% sh_array = @shelf.ingredients.map { |j| j.name } %>
+
+    <% if di_array & sh_array == di_array %>
+
+      <div class="col-md-4 liq-drink text-center shadowed white-text">
+        <div class="drinktext col-md-12">
+         <%= d.name %>
+        </div>
+        <div class="col-md-12 drink_ingredients text-center white-text alt-font">
+          <%= d.description %>
+          <br>
+        </div>
       </div>
 
     <% end %>
+
+
 
   <% end %>
 

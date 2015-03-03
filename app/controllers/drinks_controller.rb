@@ -49,7 +49,7 @@ private
   def drink_params
     params.require(:drink).permit(
                                   :name, :description, 
-                                  {ingredient_ids: []},
+                                  ingredients_attributes: [:name, :category],
                                   directions_attributes: [:id, :step, :_destroy]
                                   )
   end 

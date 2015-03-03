@@ -2,16 +2,30 @@ $(document).ready( function() {
 
 // TEXT DECORATION - NONE
   $('a').css('text-decoration', 'none')
+  $('.ingli').val().toUpperCase();
 
 // SUBMIT
 
 $('#submit_box').on('click', function(){
-
   $('#shelf-container').slideUp('slow');
+  $('#drink_container').slideDown('slow');
+
+
 
 });
 
 // INGREDIENT SEARCH
+
+var seen = {};
+$('.ingli').each(function() {
+    var txt = $(this).text();
+    if (seen[txt])
+        $(this).remove();
+    else
+        seen[txt] = true;
+});
+
+
 $('#ingredient_search').keyup(function(){
    var valThis = $(this).val().toLowerCase();
     if(valThis == ""){
@@ -23,8 +37,6 @@ $('#ingredient_search').keyup(function(){
         });
    };
 });
-
-  $('.ingli').val().toUpperCase();
 
 
 // LIQBOX HOVER DELETE

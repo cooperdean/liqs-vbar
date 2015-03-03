@@ -1,0 +1,5 @@
+<div class="nested-fields">
+  <%= f.input :name %>
+  <%= f.input :category, collection: [ "Spirit", "Liqueur", "Mix", "Pop Mix"], class: "ingredient_field" %>
+  <%= link_to_remove_association "Remove Ingredient", f, class: "btn btn-warning" %>
+</div>

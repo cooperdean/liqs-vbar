@@ -16,7 +16,7 @@ before_action :find_shelf, only: [:show, :edit, :update]
   end
 
   def create
-    @shelf = Shelf.new shelf_params
+    @shelf = Shelf.new
       if @shelf.save
         redirect_to @shelf
       else
