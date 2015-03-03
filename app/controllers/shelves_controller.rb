@@ -8,6 +8,7 @@ before_action :find_shelf, only: [:show, :edit, :update]
   def show
     @shelf = Shelf.find params[:id]
     @ingredients = Ingredient.all
+    @drinks = Drink.all
   end
 
   def new
@@ -38,6 +39,14 @@ before_action :find_shelf, only: [:show, :edit, :update]
     @shelf = Shelf.find params[:shelf_id]
     @ingredient = Ingredient.find params[:id]
     @shelf.ingredients << @ingredient
+    @shelf.save
+    redirect_to(:back)
+  end
+
+  def remove_ingredient
+    @shelf = Shelf.find params[:shelf_id]
+    @ingredient = Ingredient.find params[:id]
+    @shelf.ingredients.delete(@ingredient)
     @shelf.save
     redirect_to(:back)
   end

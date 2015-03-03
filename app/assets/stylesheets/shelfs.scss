@@ -8,6 +8,7 @@ hr {
     border-color: white;
     border-width: 1px 0 0 0;
     border-radius: 20px;
+    margin-top: -3px;
 }
 
 a {
@@ -91,6 +92,11 @@ a {
   width: 100%;
 }
 
+.submit_ingredients {
+  position: relative;
+  text-align: right;
+}
+
 .full-width {
   width: 100%;
 }
@@ -109,6 +115,10 @@ a {
   text-transform: uppercase;
 }
 
+.ingredients_list {
+  color: white
+}
+
 #liq-plus {
   height: 150px;
   padding-top: 35px;
@@ -124,9 +134,28 @@ a {
   background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
 }
 
+#submit_box {
+  padding-top: 50px; 
+  margin: 25px;
+  width: 150px;
+  height: 200px;
+  transition: 0.3s;
+  border: solid #e8d136 1px;
+  background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
+}
+
 .liqtext {
   color: white;
   text-transform: uppercase;
+  line-height: 90%;
+  transition: 0.3s;
+  padding-top: 10px;
+}
+
+.liq-remove {
+  color: red;
+  padding-right: 100px;
+  padding-bottom: 100px;
 }
 
 .shelf-ingredients {
@@ -145,8 +174,7 @@ a {
   letter-spacing: 2px;
   color: #e8d136;
   font-size: 80px;
-  text-shadow: 0px 5px 20px rgba(50, 50, 50, 0.75);
-
+  text-shadow: 0px 5px 20px rgba(50, 50, 50, 1);
 }
 
 .nav-header a {

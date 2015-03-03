@@ -1,12 +1,13 @@
 <div class="container">
-  <div class="col-md-6">
+  <div class="col-md-6 white-text">
     <%= simple_form_for @ingredient, remote: true do |f| %>
     <%= f.input :name, class: "ingredient_field" %>
-    <%= f.button :submit %>
+    <%= f.input :category, collection: [ "Spirit", "Liqueur", "Mix", "Pop Mix"], class: "ingredient_field" %>
+    <%= f.button :submit, class: "btn btn-warning" %>
     <% end %>
   </div>
 
-  <div class="col-md-6 text-center ingredients_list">
+  <div class="col-md-6 text-center ingredients_list alt-font">
     <% @ingredients.order(:name).each do |i| %>
         <%= render partial: "ingredients/ingredient", locals: { ingredient: i } %>
     <% end %>

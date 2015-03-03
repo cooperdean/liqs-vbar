@@ -3,6 +3,14 @@ $(document).ready( function() {
 // TEXT DECORATION - NONE
   $('a').css('text-decoration', 'none')
 
+// SUBMIT
+
+$('#submit_box').on('click', function(){
+
+  $('#shelf-container').slideUp('slow');
+
+});
+
 // INGREDIENT SEARCH
 $('#ingredient_search').keyup(function(){
    var valThis = $(this).val().toLowerCase();
@@ -17,6 +25,31 @@ $('#ingredient_search').keyup(function(){
 });
 
   $('.ingli').val().toUpperCase();
+
+
+// LIQBOX HOVER DELETE
+  $('.liq-ing').hover( function () {
+
+    $(this).css('border-color', 'red')
+
+  }, function () {
+
+    $(this).css('border-color', '#e8d136')
+
+  });
+
+// SUBMIT BOX HOVER
+  $('#submit_box').hover( function () {
+
+    $(this).css('border-color', '#9AFE2E')
+    $(this).css('color', '#9AFE2E')
+
+  }, function () {
+
+    $(this).css('border-color', '#e8d136')
+    $(this).css('color', 'white')
+
+  });
 
 
 // NAVLINKS LINKS HOVER

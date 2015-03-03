@@ -31,17 +31,54 @@
 
     <!--  SHELFED INGREDIENTS -->
 
-    <% @shelf.ingredients.each do |si| %>
+    <div class="col-md-2 shadowed text-center white-text large-text" id="submit_box">
+      +
+    </div>
 
-      <div class="col-md-2 liq-ing shadowed text-center">
-          <%= image_tag ("bottle_mix.png"), class: "bottle" %>  
-            <div class="liqtext alt-font">
-              <%= si.name %>
-            </div>
-     </div>
+    <% @shelf.ingredients.order(:name).each do |i| %>
+
+      <div class="col-md-2 liq-ing shadowed text-center">    
+
+          <% if i.category == "Spirit" %> 
+            <%= image_tag ("bottle_fat.png"), class: "bottle" %>  
+          <% elsif i.category == "Liqueur" %> 
+            <%= image_tag ("bottle_tall.png"), class: "bottle" %>
+          <% elsif i.category == "Mix" %> 
+            <%= image_tag ("bottle_mix.png"), class: "bottle" %>
+          <% else %>
+            <%= image_tag ("bottle_popmix.png"), class: "bottle" %>
+          <% end %>
+
+        <div class="liqtext alt-font">
+          <%= i.name %>
+        </div>
+
+      </div>
 
     <% end %>
 
-
   </div>
 </div>
+
+<div class="container">
+
+  <% @drinks.each do |d| %>
+  
+    <%# if @shelf.ingredients.all? { |a| d.ingredients.include?(a) } %>
+    
+    <% if (@shelf.ingredients & d.ingredients == d.ingredients) %>
+      
+      <div class="col-md-2 liq-ing text-center shadowed white-text">
+        <%= d.name %>
+      </div>
+
+    <% end %>
+
+  <% end %>
+
+</div>
+
+
+
+
+
