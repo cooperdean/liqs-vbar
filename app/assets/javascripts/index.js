@@ -73,10 +73,12 @@ var drinksCount = $('.liq-drink').size()
 
 
 if( drinksCount == 0 ) {
-$('#drink_counter').text("CLICK HERE WHEN YOU ARE FINISHED")
+$('#drink_counter').text("CLICK HERE WHEN YOU ARE FINISHED");
+$('#edit_box').find('.edit_text').text('NO DRINKS');
 }
 else {
-$('#drink_counter').text(drinksCount + " DRINKS TO VIEW")
+$('#drink_counter').text(drinksCount + " DRINKS TO VIEW");
+$('#edit_box').find('.edit_text').text('BACK');
 }
 
 // SUBMIT BOX HOVER
