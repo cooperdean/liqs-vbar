@@ -153,12 +153,14 @@ $('#edit_box').find('.edit_text').text('BACK');
 
   //   $('.container').imagesLoaded(function(){
   //   $('.container').masonry({
-  //     itemSelector: '.liqbox',
-  //     columnWidth: 50
+  //     itemSelector: '.liq-ing',
+  //     itemSelector: '.liq-adder',
+  //     itemSelector: '#submit_box',
+  //     columnWidth: 25
   //   });
   // });
 
-  // 
+  
 
 
 });

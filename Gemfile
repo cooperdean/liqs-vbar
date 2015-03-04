@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'cocoon'
+gem 'bcrypt', '~> 3.1.7'
+gem 'masonry-rails'
 
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 

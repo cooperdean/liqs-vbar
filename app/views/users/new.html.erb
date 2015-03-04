@@ -1,0 +1,9 @@
+<%= simple_form_for @user, url: "/users" do |f| %>
+
+  <%= f.input :name, placeholder: "Enter your username.." %>
+  <%= f.input :email, placeholder: "Enter a valid email.." %>
+  <%= f.input :password, placeholder: "Enter your password.." %>
+  <%= f.input :password_confirmation, placeholder: "Confirm your password.." %>
+  <%= f.button :submit %>
+
+<% end %>
