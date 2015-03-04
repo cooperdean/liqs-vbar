@@ -1,7 +1,6 @@
 class DrinksController < ApplicationController
 
   before_action :find_drink, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize, only: [:new]
 
   def index
     @drinks = Drink.all

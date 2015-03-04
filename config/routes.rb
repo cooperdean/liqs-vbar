@@ -13,7 +13,7 @@ get '/shelves/:shelf_id/remove_ingredient/:id' => 'shelves#remove_ingredient', a
 
 get '/login' => 'sessions#new'
 post '/login' => 'sessions#create'
-post '/logout' => 'sessions#destroy'
+get '/logout' => 'sessions#destroy'
 
 get '/signup' => 'users#new'
 post '/users' => 'users#create'

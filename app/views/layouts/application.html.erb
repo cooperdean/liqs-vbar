@@ -17,12 +17,6 @@
     <%= link_to "START HERE", shelves_path, method: :post, class: "nav-link" %>
     <%= link_to "ALL DRINKS", drinks_path, class: "nav-link" %>
     <%= link_to "NEW DRINK", new_drink_path, class: "nav-link" %>
-    <% if current_user %>
-      <%= link_to "SIGN OUT", logout_path, method: :post, class: "nav-link" %>
-    <% else %>
-      <%= link_to "SIGN IN", login_path, class: "nav-link" %>
-      <%= link_to "SIGN UP", signup_path, class: "nav-link" %>
-    <% end %>
   </div>
 
 </div>

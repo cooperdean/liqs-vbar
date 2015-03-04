@@ -12,12 +12,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'cocoon'
-gem 'bcrypt', '~> 3.1.7'
-gem 'masonry-rails'
 
 gem 'shoulda-matchers', require: false
 gem 'rspec-rails', '~> 3.0'
 gem "factory_girl_rails", "~> 4.0"
+gem 'faker'
 
 
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
