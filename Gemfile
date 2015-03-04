@@ -15,6 +15,11 @@ gem 'cocoon'
 gem 'bcrypt', '~> 3.1.7'
 gem 'masonry-rails'
 
+gem 'shoulda-matchers', require: false
+gem 'rspec-rails', '~> 3.0'
+gem "factory_girl_rails", "~> 4.0"
+
+
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
 group :development, :test do
