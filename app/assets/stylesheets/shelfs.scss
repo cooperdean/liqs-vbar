@@ -90,6 +90,7 @@ a {
   font-family: Montserrat;
   height: 135px;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .submit_ingredients {
@@ -103,10 +104,10 @@ a {
 
 .liqs_adder {
   text-align: center;
-  height: 450px;
+  height: 400px;
   width: 300px;
   transition: 0.3s;
-  margin: 25px;
+  margin: 5px;
 }
 
 .ingli {
@@ -119,6 +120,14 @@ a {
   color: white
 }
 
+#drink_container {
+  margin-left: 135px;
+}
+
+#drink_index_container {
+  margin-left: 100px;
+}
+
 #liq-plus {
   height: 150px;
   padding-top: 35px;
@@ -126,7 +135,7 @@ a {
 }
 
 .liq-ing {
-  margin: 25px;
+  margin: 5px;
   width: 150px;
   height: 200px;
   transition: 0.3s;
@@ -135,11 +144,12 @@ a {
 }
 
 .liq-drink {
-  margin: 25px;
+  margin: 5px;
   width: 200px;
   height: 200px;
   transition: 0.3s;
   border: solid #58ACFA 1px;
+  color: #58ACFA;
   background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
 }
 
@@ -149,7 +159,7 @@ a {
 
 #submit_box {
   padding-top: 50px; 
-  margin: 25px;
+  margin: 5px;
   width: 150px;
   height: 200px;
   transition: 0.3s;
@@ -159,11 +169,11 @@ a {
 
 #edit_box {
   padding-top: 50px; 
-  margin: 25px;
+  margin: 5px;
   width: 150px;
   height: 200px;
   transition: 0.3s;
-  border: solid #e8d136 1px;
+  border: solid #58ACFA 1px;
   background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
 }
 
@@ -185,6 +195,10 @@ a {
   font-size: 32px;
 }
 
+.drinktext a{
+  transition: 0.2s;
+}
+
 .liq-remove {
   color: red;
   padding-right: 100px;
@@ -199,8 +213,20 @@ a {
 
 .drink_ingredients {
   overflow: scroll;
-  height: 300px;
+  height: 100px;
   margin-top: 20px;
+}
+
+#ingredients {
+  float: right;
+}
+
+.remove_ingredient {
+  position: relative;
+  right: 20px;
+  margin-bottom: -20px;
+  color: red;
+  display: none;
 }
 
 .bottle {

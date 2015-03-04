@@ -22,7 +22,7 @@
       <div class="col-md-12 shelf-ingredients text-center">
           <% @ingredients.order(:name).each do |i| %>
             <div class="ingli">
-             <%= link_to i.name, add_ingredient_path(@shelf, i) %>
+              <%= link_to i.name, add_ingredient_path(@shelf, i) %>
               <br>
             </div>
           <% end %>
@@ -33,12 +33,16 @@
 
     <div class="col-md-2 shadowed text-center white-text large-text alt-font" id="submit_box">
       <span class="glyphicon glyphicon-ok"></span>
-      <h5>SUBMIT</h5>
+      <h5 id="drink_counter"> Submit </h5>
     </div>
 
     <% @shelf.ingredients.order(:name).each do |i| %>
 
       <div class="col-md-2 liq-ing shadowed text-center">    
+
+          <div class="remove_ingredient col-md-12 white-text text-left">
+            <%= link_to "x", remove_ingredient_path(@shelf, i) %>
+          </div>
 
           <% if i.category == "Spirit" %> 
             <%= image_tag ("bottle_fat.png"), class: "bottle" %>  
@@ -63,22 +67,27 @@
 
 <div class="container" id="drink_container">
 
-      <div class="col-md-2 shadowed text-center white-text large-text" id="edit_box">
-      +
+    <div class="col-md-2 shadowed text-center white-text large-text alt-font" id="edit_box">
+        <h3><span class="glyphicon glyphicon-chevron-up">
+          <div class="col-md-12 alt-font">
+            <h6>BACK</h6>
+          </div>
+        </span></h3>
     </div>
 
   <% @drinks.each do |d| %>
+
     <% di_array = d.ingredients.map { |di| di.name } %>
     <% sh_array = @shelf.ingredients.map { |j| j.name } %>
 
     <% if di_array & sh_array == di_array %>
 
-      <div class="col-md-4 liq-drink text-center shadowed white-text">
+      <div class="col-md-2 liq-drink text-center shadowed white-text">
         <div class="drinktext col-md-12">
-         <%= d.name %>
+         <%= link_to d.name, d %>
         </div>
         <div class="col-md-12 drink_ingredients text-center white-text alt-font">
-          <%= d.description %>
+          <%= simple_format d.description %>
           <br>
         </div>
       </div>

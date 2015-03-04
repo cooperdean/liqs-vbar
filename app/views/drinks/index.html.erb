@@ -1,8 +1,15 @@
-<div class="container">
-  <% @drinks.each do |d| %>
-    <%= link_to d.name, d %>
-    <br>
-    <%= d.description %>
-    <hr>
+<div class="container" id="drink_index_container">
+  <% @drinks.order(:name).each do |d| %>
+
+      <div class="col-md-2 liq-drink text-center shadowed white-text">
+        <div class="drinktext col-md-12">
+         <%= link_to d.name, d %>
+        </div>
+        <div class="col-md-12 drink_ingredients text-center white-text alt-font">
+          <%= simple_format d.description %>
+          <br>
+        </div>
+      </div>
+
   <% end %>
 </div>
