@@ -1,0 +1,47 @@
+<div class="col-md-2 liq-ing shadowed text-center">    
+
+    <div class="remove_ingredient col-md-12 white-text text-left">
+      <%= link_to "x", remove_ingredient_path(@shelf, i) %>
+    </div>
+
+    <% if i.category == "Spirit" %> 
+      <%= image_tag ("bottle_fat.png"), class: "bottle" %>  
+    <% elsif i.category == "Liqueur" %> 
+      <%= image_tag ("bottle_tall.png"), class: "bottle" %>
+    <% elsif i.category == "Mix" %> 
+      <%= image_tag ("bottle_mix.png"), class: "bottle" %>
+    <% else %>
+      <%= image_tag ("bottle_popmix.png"), class: "bottle" %>
+    <% end %>
+
+  <div class="liqtext alt-font">
+    <%= i.name %>
+  </div>
+
+</div>
+
+<script>
+  $('.liq-ing').hover( function () {
+
+    $(this).css('border-color', 'red');
+    $(this).find('.remove_ingredient').fadeIn('fast');
+
+  }, function () {
+
+    $(this).css('border-color', '#e8d136');
+    $(this).find('.remove_ingredient').fadeOut('fast');
+
+  });
+
+    $('.remove_ingredient a').hover( function () {
+
+      $(this).css('color', 'red');
+
+    }, function () {
+
+      $(this).css('color', 'white');
+
+    });
+
+    $('a').css('text-decoration', 'none');
+</script>

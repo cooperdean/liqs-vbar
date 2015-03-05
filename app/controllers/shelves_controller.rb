@@ -36,11 +36,14 @@ before_action :find_shelf, only: [:show, :edit, :update]
   end
 
   def add_ingredient
-    @shelf = Shelf.find params[:shelf_id]
-    @ingredient = Ingredient.find params[:id]
-    @shelf.ingredients << @ingredient
-    @shelf.save
-    redirect_to(:back)
+    respond_to do |format|  
+      @shelf = Shelf.find params[:shelf_id]
+      @ingredient = Ingredient.find params[:id]
+      @shelf.ingredients << @ingredient
+      @shelf.save
+      format.html { render :back }
+      format.js { render }
+    end
   end
 
   def remove_ingredient

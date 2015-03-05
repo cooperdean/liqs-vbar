@@ -1,4 +1,4 @@
-<div class="container full-width" id="shelf-container">
+<div class="container" id="shelf-container">
   <div class="row">
     
     <!-- INGREDIENT ADDER -->
@@ -22,7 +22,7 @@
       <div class="col-md-12 shelf-ingredients text-center">
           <% @ingredients.order(:name).each do |i| %>
             <div class="ingli">
-              <%= link_to i.name, add_ingredient_path(@shelf, i) %>
+              <%= link_to i.name, add_ingredient_path(@shelf, i), remote: true %>
               <br>
             </div>
           <% end %>
@@ -36,32 +36,13 @@
       <h5 id="drink_counter"> Submit </h5>
     </div>
 
-    <% @shelf.ingredients.order(:name).each do |i| %>
-
-      <div class="col-md-2 liq-ing shadowed text-center">    
-
-          <div class="remove_ingredient col-md-12 white-text text-left">
-            <%= link_to "x", remove_ingredient_path(@shelf, i) %>
-          </div>
-
-          <% if i.category == "Spirit" %> 
-            <%= image_tag ("bottle_fat.png"), class: "bottle" %>  
-          <% elsif i.category == "Liqueur" %> 
-            <%= image_tag ("bottle_tall.png"), class: "bottle" %>
-          <% elsif i.category == "Mix" %> 
-            <%= image_tag ("bottle_mix.png"), class: "bottle" %>
-          <% else %>
-            <%= image_tag ("bottle_popmix.png"), class: "bottle" %>
-          <% end %>
-
-        <div class="liqtext alt-font">
-          <%= i.name %>
-        </div>
-
-      </div>
-
-    <% end %>
-
+    <div class="shelved_ingredients">
+      
+      <% @shelf.ingredients.order(:name).each do |i| %>
+        <%= render partial: "/shelves/ingredient",  locals: { i: i} %>
+      <% end %>
+    
+    </div>
   </div>
 </div>
 
