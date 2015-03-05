@@ -12,6 +12,7 @@ $(document).ready( function() {
 $('#submit_box').on('click', function(){
   $('#shelf-container').slideUp('slow');
   $('#drink_container').slideDown('slow');
+  $('#drink_container').load();  
 });
 
 // EDIT
@@ -55,44 +56,9 @@ $('#ingredient_search').keyup(function(){
 });
 
 
-// LIQBOX HOVER DELETE
-  $('.liq-ing').hover( function () {
+// LIQ-ING SHOW
+$('.liq-ing').addClass('show');
 
-    $(this).css('border-color', 'red');
-    $(this).find('.remove_ingredient').fadeIn('fast');
-
-  }, function () {
-
-    $(this).css('border-color', '#e8d136');
-    $(this).find('.remove_ingredient').fadeOut('fast');
-
-  });
-
-// SUBMIT BOX VALUE
-var drinksCount = $('.liq-drink').size()
-
-
-if( drinksCount == 0 ) {
-$('#drink_counter').text("CLICK HERE WHEN YOU ARE FINISHED");
-$('#edit_box').find('.edit_text').text('NO DRINKS');
-}
-else {
-$('#drink_counter').text(drinksCount + " DRINKS TO VIEW");
-$('#edit_box').find('.edit_text').text('BACK');
-}
-
-// SUBMIT BOX HOVER
-  $('#submit_box').hover( function () {
-
-    $(this).css('border-color', '#9AFE2E');
-    $(this).css('color', '#9AFE2E');
-
-  }, function () {
-
-    $(this).css('border-color', '#e8d136');
-    $(this).css('color', 'white');
-
-  });
 
 // EDIT BOX HOVER
   $('#edit_box').hover( function () {
@@ -129,16 +95,6 @@ $('#edit_box').find('.edit_text').text('BACK');
 
   });
 
-  $('.remove_ingredient a').hover( function () {
-
-    $(this).css('color', 'red');
-
-  }, function () {
-
-    $(this).css('color', 'white');
-
-  });
-
   $('.drinktext a').hover( function () {
 
     $(this).css('color', '#e8d136');
@@ -148,6 +104,32 @@ $('#edit_box').find('.edit_text').text('BACK');
     $(this).css('color', 'white');
 
   });
+
+  // SUBMIT BOX HOVER
+  $('#submit_box').hover( function () {
+
+    $(this).css('border-color', '#9AFE2E');
+    $(this).css('color', '#9AFE2E');
+
+  }, function () {
+
+    $(this).css('border-color', '#e8d136');
+    $(this).css('color', 'white');
+
+  });
+
+  // SUBMIT BOX VALUE
+    var drinksCount = $('.liq-drink').size()
+
+
+    if( drinksCount == 0 ) {
+      $('#drink_counter').text("CLICK HERE WHEN YOU ARE FINISHED");
+    }
+      else {
+      $('#drink_counter').text(drinksCount + " DRINKS TO VIEW");
+    }
+
+    
 
   // MASONRY-RAILS
 

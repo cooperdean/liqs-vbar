@@ -141,6 +141,12 @@ a {
   transition: 0.3s;
   border: solid #e8d136 1px;
   background: radial-gradient(ellipse at center, rgba(68,68,68,1) 0%, rgba(28,28,28,1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.liq-ing.show {
+  opacity: 1;
 }
 
 .liq-drink {
